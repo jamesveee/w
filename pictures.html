@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictures of Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-page">
+        <h1>Pictures of Us 📸</h1>
+        <p class="intro-message">Here are some of our favorite moments captured in photos.</p>
+
+        <!-- Photo Gallery Grid -->
+        <div class="photo-gallery">
+            <div class="photo-gallery">
+                <img src="media/pic1.jfif" alt="Pic 1" onclick="openLightbox('media/pic1.jfif')">
+                <img src="media/pic2.jfif" alt="Pic 2" onclick="openLightbox('media/pic2.jfif')">
+                <img src="media/pic3.jfif" alt="Pic 3" onclick="openLightbox('media/pic3.jfif')">
+                <img src="media/pic4.jfif" alt="Pic 4" onclick="openLightbox('media/pic4.jfif')">
+                <img src="media/pic5.jfif" alt="Pic 5" onclick="openLightbox('media/pic5.jfif')">
+                <img src="media/pic6.jfif" alt="Pic 6" onclick="openLightbox('media/pic6.jfif')">
+                <img src="media/pic7.jfif" alt="Pic 7" onclick="openLightbox('media/pic7.jfif')">
+                <img src="media/pic8.jfif" alt="Pic 8" onclick="openLightbox('media/pic8.jfif')">
+                <img src="media/pic9.jfif" alt="Pic 9" onclick="openLightbox('media/pic9.jfif')">
+                <img src="media/pic10.jfif" alt="Pic 10" onclick="openLightbox('media/pic10.jfif')">
+                <img src="media/pic11.jfif" alt="Pic 11" onclick="openLightbox('media/pic11.jfif')">
+                <img src="media/pic12.jfif" alt="Pic 12" onclick="openLightbox('media/pic12.jfif')">
+                <img src="media/pic13.jfif" alt="Pic 13" onclick="openLightbox('media/pic13.jfif')">
+                <img src="media/pic14.jfif" alt="Pic 14" onclick="openLightbox('media/pic14.jfif')">
+                <img src="media/pic15.jfif" alt="Pic 15" onclick="openLightbox('media/pic15.jfif')">
+                <img src="media/pic16.jfif" alt="Pic 16" onclick="openLightbox('media/pic16.jfif')">
+                <img src="media/pic18.jfif" alt="Pic 18" onclick="openLightbox('media/pic18.jfif')">
+                <img src="media/pic19.jfif" alt="Pic 19" onclick="openLightbox('media/pic19.jfif')">
+                <img src="media/pic20.jfif" alt="Pic 20" onclick="openLightbox('media/pic20.jfif')">
+                <img src="media/pic21.jfif" alt="Pic 21" onclick="openLightbox('media/pic21.jfif')">
+                <img src="media/pic22.jfif" alt="Pic 22" onclick="openLightbox('media/pic22.jfif')">
+                <img src="media/pic23.jfif" alt="Pic 23" onclick="openLightbox('media/pic23.jfif')">
+                <img src="media/pic24.jfif" alt="Pic 24" onclick="openLightbox('media/pic24.jfif')">
+                <img src="media/pic25.jfif" alt="Pic 25" onclick="openLightbox('media/pic25.jfif')">
+                <img src="media/pic26.jfif" alt="Pic 26" onclick="openLightbox('media/pic26.jfif')">
+                <img src="media/pic27.jfif" alt="Pic 27" onclick="openLightbox('media/pic27.jfif')">
+                <img src="media/pic28.jfif" alt="Pic 28" onclick="openLightbox('media/pic28.jfif')">
+                <img src="media/pic29.jfif" alt="Pic 29" onclick="openLightbox('media/pic29.jfif')">
+                <img src="media/pic30.jfif" alt="Pic 31" onclick="openLightbox('media/pic31.jfif')">
+                <img src="media/pic32.jfif" alt="Pic 32" onclick="openLightbox('media/pic32.jfif')">
+                <img src="media/pic33.jfif" alt="Pic 33" onclick="openLightbox('media/pic33.jfif')">
+                <img src="media/pic34.jfif" alt="Pic 34" onclick="openLightbox('media/pic34.jfif')">
+                <img src="media/pic35.jfif" alt="Pic 35" onclick="openLightbox('media/pic35.jfif')">
+                <img src="media/pic36.jfif" alt="Pic 36" onclick="openLightbox('media/pic36.jfif')">
+                <img src="media/pic37.jfif" alt="Pic 37" onclick="openLightbox('media/pic37.jfif')">
+                <img src="media/pic38.jfif" alt="Pic 38" onclick="openLightbox('media/pic38.jfif')">
+                <img src="media/pic39.jfif" alt="Pic 39" onclick="openLightbox('media/pic39.jfif')">
+                <img src="media/pic40.jfif" alt="Pic 40" onclick="openLightbox('media/pic40.jfif')">
+                <img src="media/pic41.jfif" alt="Pic 41" onclick="openLightbox('media/pic41.jfif')">
+                <img src="media/pic42.jfif" alt="Pic 43" onclick="openLightbox('media/pic43.jfif')">
+                <img src="media/pic43.jfif" alt="Pic 44" onclick="openLightbox('media/pic44.jfif')">
+                <img src="media/pic44.jfif" alt="Pic 45" onclick="openLightbox('media/pic45.jfif')">
+                <img src="media/pic45.jfif" alt="Pic 46" onclick="openLightbox('media/pic46.jfif')">
+
+            </div>
+
+            <!-- Back to Main Page Link -->
+            <a href="main.html" class="back-link">Back to Main Page</a>
+        </div>
+
+    <!-- Lightbox for Full-Size Image View -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-image" src="" alt="Full-size image">
+    </div>
+
+    <script>
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox-image').src = imageSrc;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reasons I Love You</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-page">
+        <h1>Reasons I Love You ❤️</h1>
+        <p class="intro-message">Click the button to see a random reason why I love you!</p>
+        
+        <!-- Button to show a random reason -->
+        <button id="random-reason-button" class="button-link">Show Me A Reason</button>
+        
+        <!-- Area where the random reason will appear -->
+        <p id="random-reason" class="intro-message"></p>
+
+    <!-- Back to Main Page Link -->
+    <a href="main.html" class="back-link">Back to Main Page</a>
+    </div>
+
+    <!-- JavaScript for displaying random reasons -->
+    <script>
+        const reasons = [
+            "Your integrity is commendable",
+            "Your commitment to me",
+            "Your beautiful face that I want to kiss ALL the TIME",
+            "Your honesty",
+            "You have eyes that I can get lost in",
+            "Your soft and squeezable butt",
+            "Your pretty feet",
+            "Your small waist",
+            "Your little toes",
+            "Your soft legs that I love to touch",
+            "Your soft hair that always smells so GOOD",
+            "Your sense of humor (you make me laugh 24/7)",
+            "Your intentions, always good. Your heart is always in the right place",
+            "Your sense of style",
+            "Your morals",
+            "Your values",
+            "Your taste in music, art and fashion",
+            "Your voice is like silk to me, especially when you go ASMR poopy-butt mode",
+            "Your skills in the bedroom (!!!!)",
+            "Your personality in general",
+            "Your attitude, I love it!",
+            "Your body, all of it!", 
+            "Your scent",
+            "Your mannerisms, such a CUTIE PIE",
+            "You're an understanding person", 
+            "You're soooooo sexy, you drive me crazy",
+            "Your luscious lips that I want to kiss forever",
+            "Your cute cheeks that I just want to squeeze and kiss",
+            "Your smile!!",
+            "Your gentle and feminine hands!!",
+            "The fact that you’re so down to Earth",
+            "Your persistence, you never give up",
+            "Your resilience, you've been through a lot but you keep going",
+            "Your respect, you are very respectful towards everybody",
+            "You're a very responsible person and lock in when you need to",
+            "You're very loyal and I trust you a lot!!",
+            "I love the way you love me",
+            "I love when you let loose",
+            "I love the way you always want to help",
+            "I love the way you’re unafraid",
+            "The way you communicate, we've been getting very good at that!",
+            "Your grace, I could watch you walk around your room doing stuff for hours and never get bored",
+            "Your faith, I love that you asked me to pray with you at night, cutie pie!",
+            "The way you talk",
+            "The way you walk, you're such a hottie",
+            "The way you sigh, what a sweet girl you are",
+            "The way you move, especially your dance moves!",
+            "The way you help me come back to Earth",
+            "The way you’re always finding new ways to make me happy",
+            "You make me happy to be alive!!",
+            "You make me want to live forever so I can be with you forever",
+            "You give me love surges!!!",
+            "Everything reminds me of you, seriously, you're always on my mind!!",
+            "Everytime it rains, it reminds me of you",
+            "The most beautiful musical compositions ever made remind me of you",
+            "I love your soft skin",
+            "I love how smart you are, you are scary smart",
+            "Your competitiveness, you always win even if you lose at Mario Party",
+            "The fact that you like video games!",
+            "The fact that you believe in God!!",
+            "Your love makes me feel warm and fuzzy inside, you make me melt",
+            "Your specialness and uniqueness",
+            "Your cleanliness and organization skills, in stark contrast to me, but I can clean up after myself don't worry",
+            "The fact that you’re goal-oriented and you strive for those goals and achieve them",
+            "Your sassiness HAHA",
+            "You’re so caring towards the ones you love",
+            "You have a really, really, really, really, biiiiig heart",
+            "You're extremely generous",
+            "Your altruism, that homeless person did not deserve you though LMAO",
+            "Your dedication",
+            "Your kindness knows no bounds",
+            "You are consistently the funniest person in the room",
+            "You don’t care about or look at other men",
+            "Our sex-life!!! You turn me on so much, it's unreal",
+            "The memories we made together",
+            "The way you always act surprised and happy when rain hits your window",
+            "The way you look at me with your beautiful eyes",
+            "The way you go into Saburitto mode and I come cuddle you",
+            "Your courtesy",
+            "The way you want to be treated like a lady, I love your femininity!!", 
+            "You love me for who I am",
+            "When you get all excited and weird, which is energy that I could match!",
+            "When you surprise me with little gifts",
+            "When it’s has been 0 times and I get a reward",
+            "The way you chew like a little bunny",
+            "Your self-assuredness",
+            "When you validate how I feel",
+            "When we watch movies and eat together",
+            "The progression with your mental health, and pushing through regardless of the challenges", 
+            "Your willingness to work on yourself and come out of your comfort zone",
+            "The fact you turned me into one of those insufferable people in a couple but I don’t care because I really love you so much",
+            "The way you always plan ahead",
+            "The way that you console me",
+            "The way that you put people in their place",
+            "Your arguing skills (I will never win)",
+            "When you tell me that you miss me",
+            "Your charisma",
+            "Your soul",
+            "Your hustling spirit"
+        ];
+
+        // Display a random reason on button click
+        document.getElementById('random-reason-button').addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * reasons.length);
+            const randomReasonElement = document.getElementById('random-reason');
+
+            // Update the text content with the random reason
+            randomReasonElement.textContent = reasons[randomIndex];
+
+            // Add a fade-in effect
+            randomReasonElement.classList.remove('fade-in');
+            void randomReasonElement.offsetWidth; // Trigger reflow to reset animation
+            randomReasonElement.classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>
+
+

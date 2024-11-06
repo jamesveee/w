@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Date Ideas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-page">
+        <h1>Future Date Ideas 🌠</h1>
+        <p class="intro-message">Looking for something fun or romantic to do? Click the button below to get a date idea!</p>
+
+        <!-- Button to show a random date idea -->
+        <button id="random-date-button" class="button-link">Surprise Us!</button>
+        
+        <!-- Area where the random date idea will appear -->
+        <p id="random-date" class="intro-message"></p>
+
+        <!-- Back to Main Page Link -->
+        <a href="main.html" class="back-link">Back to Main Page</a>
+    </div>
+
+    <!-- JavaScript for displaying random date ideas -->
+    <script>
+        const dateIdeas = [
+            "Picnic in the park with homemade treats",
+            "Movie night under the stars with a projector and blankets",
+            "Visit a local museum and pick your favorite exhibit",
+            "Go to a live music event or jazz club",
+            "Spend a cozy day indoors baking and decorating cookies together",
+            "Plan a mini road trip to a town neither of you has visited",
+            "Take a cooking class together or follow a recipe you've never tried",
+            "Go on a scenic hike and bring a camera for fun photo ops",
+            "Attend a comedy show for some laughs",
+            "Explore a new coffee shop and have a long, cozy chat",
+            "Visit an art gallery and talk about your favorite pieces",
+            "Have a game night with all your favorite board games",
+            "Watch each other’s favorite childhood movies",
+            "Go bowling and see who can score the most strikes!",
+            "Take a pottery or craft class together",
+            "Plan a spontaneous staycation in your own city",
+            "Visit a botanical garden or local farm",
+            "Take a dance class and learn some moves",
+            "Write and exchange love letters in a cozy café",
+            "Make a DIY project for each other",
+            "Have breakfast at sunrise at a scenic spot",
+            "Volunteer together for a cause you both care about",
+            "Attend a poetry reading or book reading",
+            "Spend the day visiting local bookstores and picking out books for each other",
+            "Rent bicycles and explore the city together",
+            "Plan a seasonal photo shoot for fun memories",
+            "Play Mario Party and drink!",
+            "Picnic in the park with homemade treats",
+            "Movie night under the stars with a projector and blankets",
+            "Visit a local museum and pick your favorite exhibit",
+            "Go to a live music event or jazz club",
+            "Spend a cozy day indoors baking and decorating cookies together",
+            "Plan a mini road trip to a town neither of you has visited",
+            "Take a cooking class together or follow a recipe you've never tried",
+            "Go on a scenic hike and bring a camera for fun photo ops",
+            "Attend a comedy show for some laughs",
+            "Explore a new coffee shop and have a long, cozy chat",
+            "Visit an art gallery and talk about your favorite pieces",
+            "Have a game night with all your favorite board games",
+            "Watch each other’s favorite childhood movies",
+            "Go bowling and see who can score the most strikes!",
+            "Take a pottery or craft class together",
+            "Plan a spontaneous staycation in your own city",
+            "Visit a botanical garden or local farm",
+            "Take a dance class and learn some moves",
+            "Write and exchange love letters in a cozy café",
+            "Make a DIY project for each other",
+            "Have breakfast at sunrise at a scenic spot",
+            "Volunteer together for a cause you both care about",
+            "Attend a poetry reading or book reading",
+            "Spend the day visiting local bookstores and picking out books for each other",
+            "Rent bicycles and explore the city together",
+            "Plan a seasonal photo shoot for fun memories",
+            "Go to a theme park and try all the thrill rides",
+            "Spend an afternoon making friendship bracelets or keepsakes",
+            "Go to an open-air market and pick out a small gift for each other",
+            "Spend a day at the beach, building sandcastles and soaking in the sun",
+            "Create a time capsule and bury it somewhere special",
+            "Take turns sharing personal dreams and goals for the future",
+            "Host a mini talent show at home with just the two of you",
+            "Have a karaoke night singing only each other’s favorite songs",
+            "Do a puzzle together, choosing one with a beautiful picture to frame later",
+            "Go horseback riding at a local ranch or farm",
+            "Try paddleboarding or canoeing together",
+            "Visit a local food festival and sample dishes you’ve never tried",
+            "Attend a wine or cheese tasting event",
+            "Have a plant-potting or gardening date at home",
+            "Go thrifting and choose outfits for each other",
+            "Host a tea party with your favorite teas and pastries",
+            "Set up a scavenger hunt with clues for each other to follow",
+            "Visit a planetarium and look at the stars together",
+            "Spend a day being tourists in your own town",
+            "Do a random act of kindness together for someone in need",
+            "Write and film a short video or skit together for fun",
+            "Go to a pet café and spend time with the animals",
+            "Recreate your favorite date from the past",
+            "Go to an outdoor skating rink and warm up with hot cocoa",
+            "Decorate or paint a room together for a fresh start",
+            "Have a spa day at home, complete with face masks and massages",
+            "Take a beginner’s language class together",
+            "Go to a sports game and cheer for the same team",
+            "Visit an aquarium and share your favorite sea animals",
+            "Host a photo booth session with funny props",
+            "Have a science experiment night, trying out safe, fun projects",
+            "Spend an evening stargazing and spotting constellations",
+            "Make a scrapbook of your favorite memories so far",
+            "Build a blanket fort and watch movies together inside",
+            "Attend a cooking competition or tasting event",
+            "Visit a farmer’s market and pick ingredients for a homemade meal",
+            "Plan a day where each of you chooses half the activities",
+            "Spend the day thrifting for funny or unique items",
+            "Visit a greenhouse or nursery and pick out a plant together",
+            "Create a vision board for your shared goals",
+            "Decorate your place with holiday lights and candles",
+            "Try a new type of cuisine at a restaurant you’ve never been to",
+            "Visit a butterfly garden or sanctuary",
+            "Write a joint bucket list and set dates to start crossing things off",
+            "Go to a zoo and pretend you’re on a safari adventure",
+            "Pick a recipe and have a themed dinner night",
+            "Host a mini film festival with favorite movies from both of you",
+            "Take a yoga class together, in-person or online",
+            "Try making pottery together at home or at a studio",
+            "Spend an evening listening to a new music genre and discovering new favorites",
+            "Go on a sunrise hike and start the day with an adventure",
+            "Spend the evening making custom playlists for each other",
+            "Take a scenic train ride together and watch the view",
+            "Write down compliments for each other and read them aloud",
+            "Visit a trampoline park and jump around like kids",
+            "Spend a rainy day indoors reading books and drinking tea",
+            "Go to a flea market and hunt for hidden treasures",
+            "Attend a cooking demo or food truck festival",
+            "Spend a day at an amusement arcade and play classic games",
+            "Create an indoor camping experience with s’mores and sleeping bags",
+            "Visit a vineyard or brewery for a tasting tour",
+            "Take a polaroid or instant photo challenge and capture moments",
+            "Visit a wildlife sanctuary or animal reserve",
+            "Try tandem biking together in a scenic area",
+            "Spend the day volunteering at an animal shelter",
+            "Take a scenic drive and listen to each other’s favorite songs",
+            "Go to a hot springs or natural spa",
+            "Rent a cabin or tiny house for a cozy getaway",
+            "Take a boat ride at sunset or sunrise",
+            "Make a list of places to travel and plan dream vacations",
+            "Host a mini art session and paint or draw each other",
+            "Go to a board game café and try new games",
+            "Spend a night star-gazing with a blanket and telescope",
+            "Build gingerbread houses and decorate them together",
+            "Do a mini photo session in a beautiful outdoor setting",
+            "Visit a fair or carnival and enjoy the rides",
+            "Go to a scenic overlook and just take in the view",
+            "Take a class on something you’re both interested in",
+            "Have a pillow fight and act like kids",
+            "Make a wish together on a shooting star or dandelion",
+        ];
+
+        document.getElementById('random-date-button').addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * dateIdeas.length);
+            const randomDateElement = document.getElementById('random-date');
+
+            // Update the text content with the random date idea
+            randomDateElement.textContent = dateIdeas[randomIndex];
+
+            // Add a fade-in effect
+            randomDateElement.classList.remove('fade-in');
+            void randomDateElement.offsetWidth; // Trigger reflow to reset animation
+            randomDateElement.classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>
